@@ -14,10 +14,10 @@ const data = new Uint8Array(64);
 data.fill(0x42);
 
 const amount = 5;
-const theshold = 4;
+const threshold = 4;
 
-// Creating 5 shares (need 3 to restore)
-let sharesPromise = sss.createShares(data, amount, theshold);
+// Creating 5 shares (need 4 to restore)
+let sharesPromise = sss.createShares(data, amount, threshold);
 
 // Write the shares to the screen
 sharesPromise.then((x) => {
